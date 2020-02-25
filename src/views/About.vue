@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <svg-icon icon-class="icon-test"/>
     <ul>
       <li v-for="(item,idx) in gg" :key="idx">
         <p>{{item.title}}</p>
@@ -8,6 +9,7 @@
         <p>{{item.author_name}}</p>
       </li>
     </ul>
+    
     <!-- <ul v-for="(item,idx) in name" :key="idx">
       <li>{{item.name}}</li>
       <li>{{item.age}}</li>
@@ -27,6 +29,7 @@ export default {
   mounted() {
     this.getData3();
     this.getData2();
+    this.getData()
   },
   methods: {
     async getData() {
@@ -48,4 +51,8 @@ export default {
 };
 </script>
 <style lang="scss">
+.about{
+  color:blue;
+  font-size:18px;
+}
 </style>
